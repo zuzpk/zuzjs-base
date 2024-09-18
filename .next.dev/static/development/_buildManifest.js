@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = {__rewrites:{afterFiles:[{has:void 0,source:"\u002F@\u002F:method*\u002F:action*",destination:"\u002Fapi\u002F:method*\u002F:action*"}],beforeFiles:[],fallback:[]},sortedPages:["\u002F_app"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
