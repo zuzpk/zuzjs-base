@@ -7,6 +7,9 @@ const [ d, distDir ] = process.argv.find(v => v.indexOf('dir=') > -1).split("=")
 
 return `/** @type {import('next').NextConfig} */
 const nextConfig = {
+    rewrites: () => [
+        { source: "/@/:method*/:action*", destination: "/api/:method*/:action*" }
+    ],
     reactStrictMode: false,
     distDir: "${distDir || `.next`}",
     cleanDistDir: true,
@@ -15,10 +18,10 @@ const nextConfig = {
         loader: 'custom',
         loaderFile: './imgloader.js',
         remotePatterns: [
-        {
-            protocol: "https",
-            hostname: "*"
-        }
+            {
+                protocol: "https",
+                hostname: "*"
+            }
         ]
     }
 }

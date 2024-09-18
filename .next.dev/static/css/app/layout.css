@@ -78,100 +78,110 @@ button {
   font-style: normal;
   font-display: swap;
 }
-:root {
+html {
+  color-scheme: light dark;
   --primary: #07a067;
   --primary-hover: #10ba7c;
   --radius: 5px;
+  --body: #e6eaf2;
+  --text: #111;
+}
+html.dark {
+  --body: #222;
+  --text: #e6eaf2;
 }
 
-/* LIGHT THEME */
-@media (prefers-color-scheme: light) {
-  :root {
-    --body: #e6eaf2;
-    --content: #fff;
-    --text: #111;
-    --input: #eee;
-  }
-}
-/* DARK THEME */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body: #222;
-    --content: #444;
-    --text: #dbdbdb;
-    --input: #323232;
-  }
-}
-.faxGr {
+/**
+* @file /src/actions/index.jsx
+*/
+/**
+* @file /src/app/error.jsx
+*/
+.fYPlPY {
   display: flex;
 }
 
-.cboVz {
+.cYzzZY {
   flex-direction: column;
 }
 
-.aavor {
+.aKLvk6 {
   align-items: center;
 }
 
-.jbk2x {
+.jxkoVx {
   justify-content: center;
 }
 
-.aboVz {
+.aY1l2K {
   position: absolute;
 }
 
-.adLAp {
+.aKnLq6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.ceZD5 {
+.cKrgbY {
   color: #777;
 }
 
-.fseVv5 {
+.fsx5vvK {
   font-size: 50px;
 }
 
-.fwaQ8L {
+.fwxVwkK {
   font-weight: 900;
 }
 
-.fsbmOp {
+.fsKwWNK {
   font-size: 24px;
 }
 
-.fsep81 {
+.fsYaBE6 {
   font-size: 30px;
 }
 
-.mtbq7r {
+.mtKnqRx {
   margin-top: 20px;
 }
 
-.fsejZW {
+.fsYGEWx {
   font-size: 18px;
 }
 
-.pbkZX {
+/**
+* @file /src/app/layout.jsx
+*/
+/**
+* @file /src/app/page.jsx
+*/
+.pKr856 {
   padding: 25px;
 }
 
-.wenR4 {
-  width: 100px;
+.wYMA0Y {
+  width: 100vw;
 }
 
-.he087 {
-  height: 100px;
+.hYbAnK {
+  height: 100vh;
 }
 
-.mhe5Rx {
-  min-height: 100px;
+/**
+* @file /src/app/wrapper.jsx
+*/
+.mhx22Mx {
+  min-height: 100vh;
 }
 
+/**
+* @file /src/config.jsx
+*/
+/**
+* @file /src/middleware.jsx
+*/
 *, body {
   font-family: "Roboto", sans-serif !important;
 }
@@ -185,5 +195,39 @@ body {
 }
 
 a {
+  color: var(--text);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+nextjs-portal {
+  display: none;
+}
+
+.btn {
+  border: 0px;
+  color: white;
+  border-radius: var(--btn-radius);
+  padding: 5px 15px;
+}
+.btn.btn-primary {
+  background: var(--primary);
+}
+.btn.btn-primary:hover {
+  background: var(--primary-hover);
+}
+.btn.btn-secondary {
+  background: var(--secondary);
+}
+.btn.btn-secondary:hover {
+  background: var(--secondary-hover);
+}
+
+.input {
+  background: var(--input);
+  border: 0px;
+  padding: 12px;
+  border-radius: var(--radius);
   color: var(--text);
 }

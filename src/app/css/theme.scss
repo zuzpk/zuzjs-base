@@ -1,20 +1,36 @@
-:root{    
-    --primary: #07a067;
-    --primary-hover: #10ba7c;
-    --radius: 5px;
-}
-/* LIGHT THEME */
-@media (prefers-color-scheme: light) {:root{
-    --body: #e6eaf2;
-    --content: #fff;
-    --text: #111;
-    --input: #eee;
-}}
+$vars: (
+    primary: #07a067,
+    primary-hover: #10ba7c,
+    radius: 5px,
+);
 
-/* DARK THEME */
-@media (prefers-color-scheme: dark) {:root{
-    --body: #222;
-    --content: #444;
-    --text: #dbdbdb;
-    --input: #323232;
-}}
+$light: (
+    body: #e6eaf2,
+    text: #111
+);
+
+$dark: (
+    body: #222,
+    text: #e6eaf2
+);
+
+html {
+
+    color-scheme: light dark;
+
+    @each $name, $value in $vars{
+        --#{$name}: #{$value};
+    }
+
+    
+    @each $name, $value in $light {
+        --#{$name}: #{$value};
+    }   
+    
+    &.dark{
+        @each $name, $value in $dark {
+            --#{$name}: #{$value};
+        }
+    }
+
+}

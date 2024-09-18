@@ -11,4 +11,35 @@ body {
   background: var(--body);
   color: var(--text);
 }
-a{ color: var(--text); }
+a{ color: var(--text); user-select: none; }
+
+nextjs-portal {
+  display: none;
+}
+
+.btn{
+  border: 0px;
+  color: white;
+  border-radius: var(--btn-radius);
+  padding: 5px 15px;
+  &.btn-primary{
+    background: var(--primary);
+    &:hover{
+      background: var(--primary-hover);
+    }
+  }
+  &.btn-secondary{
+    background: var(--secondary);
+    &:hover{
+      background: var(--secondary-hover);
+    }
+  }
+}
+
+.input{
+  background: var(--input);
+  border: 0px;
+  padding: 12px;
+  border-radius: var(--radius);
+  color: var(--text);
+}
