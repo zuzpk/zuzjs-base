@@ -1,7 +1,10 @@
 "use client"
-import { useEffect } from "react"
-import { Provider } from "@zuzjs/store"
+import { useEffect, useMemo } from "react"
+// import { Provider } from "@zuzjs/store"
 import { Box } from "@zuzjs/ui";
+import "@zuzjs/ui/styles";
+import Header from "./header";
+import createStore from "@zuzjs/react-store";
 
 const Wrapper = ({ children }) => {
 
@@ -15,18 +18,23 @@ const Wrapper = ({ children }) => {
 
 const Main = ({ children }) => {
 
+  const { Provider } = createStore(`app`, {
+    version: 1.1,
+    debug: true
+  })
+
   useEffect(() => {
-        
+
+
   }, []);
 
-  return <Provider
-    initialState={{
-      app: {
-        debug: true
-      }
-    }}>
-    <Box as={`app flex minH:100vh`}>{children}</Box>
+  return <Provider>
+    <Box as={`app flex minH:100vh cols`}>
+      <Header />
+      {children}
+      </Box>
   </Provider>
+
 
 }
 

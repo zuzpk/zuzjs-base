@@ -1,12 +1,20 @@
 $vars: (
-    primary: #07a067,
-    primary-hover: #10ba7c,
-    radius: 5px,
+    
+    primary: #bc2a2b,
+    primary-hover: #d73b3b,
+    radius: 8px,    
+    text-size: 16px,
+
+    password-toggle-radius: var(--radius),
+
 );
 
 $light: (
     body: #e6eaf2,
-    text: #111
+    text: #111,
+    btn-text: #fff,
+    input: #fff,
+    cover-bg: rgba(230,234,242,0.8),
 );
 
 $dark: (
@@ -14,7 +22,7 @@ $dark: (
     text: #e6eaf2
 );
 
-html {
+body {
 
     color-scheme: light dark;
 

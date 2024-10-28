@@ -17,29 +17,35 @@ nextjs-portal {
   display: none;
 }
 
+:root{
+  --text-wheel-speed: .1 !important;
+  --text-wheel-transition: translate calc(var(--text-wheel-speed) * 1s) linear !important;
+}
+
 .btn{
   border: 0px;
   color: white;
   border-radius: var(--btn-radius);
   padding: 5px 15px;
-  &.btn-primary{
+  &.link{
+    background: transparent;
+    padding: 0px !important;
+    border: 0px;
+    color: var(--text);
+    &:hover{
+      text-decoration: underline; 
+    }
+  }
+  &.primary{
     background: var(--primary);
     &:hover{
       background: var(--primary-hover);
     }
   }
-  &.btn-secondary{
+  &.secondary{
     background: var(--secondary);
     &:hover{
       background: var(--secondary-hover);
     }
   }
-}
-
-.input{
-  background: var(--input);
-  border: 0px;
-  padding: 12px;
-  border-radius: var(--radius);
-  color: var(--text);
 }

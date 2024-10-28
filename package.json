@@ -1,11 +1,11 @@
 {
   "name": "zuzjs-base",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "scripts": {
-    "dev": "zuzjs & node zuz.js mode=dev dir=.next.dev && next dev -p 2001",
+    "dev": "concurrently \"zuzjs\" \"node zuz.js mode=dev dir=.next.dev\" \"next dev -p 3001\"",
     "build": "node zuz.js mode=prod dir=.next.build && next build",
-    "start": "next start -p 2001",
+    "start": "next start -p 3001",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "react-dom": "19.0.0-beta-26f2496093-20240514"
   },
   "devDependencies": {
+    "concurrently": "^9.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.5"
   }
